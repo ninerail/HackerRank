@@ -1,6 +1,13 @@
 //Test values
 var n = 8;
 var s = "UDDDUDUU";
+var goal = 1;
+var actual = countingValleys(n, s);
+
+document.getElementById("n").innerHTML = n;
+document.getElementById("s").innerHTML = s;
+document.getElementById("goal").innerHTML = goal;
+document.getElementById("actual").innerHTML = actual;
 
 // Complete the countingValleys function below.
 // This function is my work:
@@ -22,4 +29,3 @@ function countingValleys(n, s) {
   }
   return count;
 }
-console.log(countingValleys(n,s)); // Desired output: 1
