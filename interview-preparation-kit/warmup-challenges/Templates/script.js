@@ -1,12 +1,14 @@
 //Test values
-var n = 9;
-var x = [10, 20, 20, 10, 10, 30, 50, 10, 20];
-var goal = 3;
+var n = 5;
+var d = 4;
+var a = [1, 2, 3, 4, 5];
+var goal = [5, 1, 2, 3, 4];
 var actual = myFunction(n, ar);
 
 //Update html
 document.getElementById("n").innerHTML = n;
-document.getElementById("x").innerHTML = x;
+document.getElementById("d").innerHTML = d;
+document.getElementById("d").innerHTML = a;
 document.getElementById("goal").innerHTML = goal;
 document.getElementById("actual").innerHTML = actual;
 
