@@ -8,13 +8,16 @@ var actual = rotLeft(a, d);
 //Update html
 document.getElementById("n").innerHTML = n;
 document.getElementById("d").innerHTML = d;
-document.getElementById("d").innerHTML = a;
+document.getElementById("a").innerHTML = a;
 document.getElementById("goal").innerHTML = goal;
 document.getElementById("actual").innerHTML = actual;
 
 // Core function
 function rotLeft(a, d) {
-  console.log(a, d);
-
+  // there are a.length possible answers!
+  let numberOfRotations = d % a.length
+  for (var i = 0; i < numberOfRotations; i++){
+    a.push(a.shift());
+  }
+  return a;
 }
-
