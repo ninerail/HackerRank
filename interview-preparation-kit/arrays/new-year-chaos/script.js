@@ -12,5 +12,4 @@ document.getElementById("actual").innerHTML = actual;
 
 // Core function
 function myFunction(n, x) {
- 
 }
