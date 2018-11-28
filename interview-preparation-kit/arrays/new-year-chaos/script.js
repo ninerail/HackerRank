@@ -1,15 +1,32 @@
 //Test values
-var n = 9;
-var x = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+var n = 5;
+var testCase = [1, 2, 4, 5, 3];
+var q = testCase;
 var goal = 3;
-var actual = myFunction(n, ar);
+var actual = myFunction(q);
 
 //Update html
+
 document.getElementById("n").innerHTML = n;
-document.getElementById("x").innerHTML = x;
+document.getElementById("q").innerHTML = q;
 document.getElementById("goal").innerHTML = goal;
 document.getElementById("actual").innerHTML = actual;
 
 // Core function
-function myFunction(n, x) {
+function myFunction(q) {
+  var result = 0;
+
+  for (var i = 0; i < q.length; i++){
+    var position = i + 1;
+    var moves = q[i] - position
+    if (moves < 0){
+      moves = 0;
+    }
+    if (moves > 2){
+      return("Too chaotic");
+    }
+    result += moves;
+  }
+  return result;
+
 }
