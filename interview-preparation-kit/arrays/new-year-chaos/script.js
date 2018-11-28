@@ -1,7 +1,6 @@
 //Test values
 var n = 5;
-var testCase = [1, 2, 4, 5, 3];
-var q = testCase;
+var q = [2, 1, 5, 3, 4];
 var goal = 3;
 var actual = myFunction(q);
 
@@ -17,16 +16,16 @@ function myFunction(q) {
   var result = 0;
 
   for (var i = 0; i < q.length; i++){
-    var position = i + 1;
-    var moves = q[i] - position
-    if (moves < 0){
-      moves = 0;
-    }
-    if (moves > 2){
-      return("Too chaotic");
-    }
-    result += moves;
+   console.log(numMoves(i));
   }
-  return result;
+
+{
+  var moves = q[i] - (i + 1);
+  if (moves < 0){
+    moves = 0;
+  }
+  if (moves > 2){
+    return("Too chaotic");
+  }
 
 }
